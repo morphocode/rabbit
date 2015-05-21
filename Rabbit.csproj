@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5162CB3D-3CB7-4A27-B72E-CF716F03668B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rabbit</RootNamespace>
+    <AssemblyName>Rabbit</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>
+    </StartupObject>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GH_IO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6a29997d2e6b4f97, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>references\GH_IO.dll</HintPath>
+    </Reference>
+    <Reference Include="Grasshopper, Version=1.0.0.20, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>references\Grasshopper.dll</HintPath>
+    </Reference>
+    <Reference Include="RhinoCommon, Version=5.0.15006.0, Culture=neutral, PublicKeyToken=552281e97c755530, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>references\RhinoCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="Rhino_DotNET, Version=4.0.61206.14, Culture=neutral, PublicKeyToken=552281e97c755530, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>references\Rhino_DotNET.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GH\CellularAutomata\Component_CABase.cs" />
+    <Compile Include="GH\CellularAutomata\Component_RegularCA2d.cs" />
+    <Compile Include="GH\CellularAutomata\Component_RandomStateConfig.cs" />
+    <Compile Include="GH\CellularAutomata\Component_CustomStateConfig.cs" />
+    <Compile Include="GH\CellularAutomata\Component_CA1d.cs" />
+    <Compile Include="GH\CellularAutomata\Component_ElementaryCell.cs" />
+    <Compile Include="GH\CellularAutomata\Component_ExcitableCell.cs" />
+    <Compile Include="GH\CellularAutomata\Component_LifeLikeCell.cs" />
+    <Compile Include="GH\CellularAutomata\Component_DiscreteTime.cs" />
+    <Compile Include="GH\CellularAutomata\Component_SurviveRule_OBSOLETE.cs" />
+    <Compile Include="GH\CellularAutomata\Component_CellComponents.cs" />
+    <Compile Include="GH\CellularAutomata\Component_CAEvolver.cs" />
+    <Compile Include="GH\CellularAutomata\Component_BornRule_OBSOLETE.cs" />
+    <Compile Include="GH\LSystems\Component_LSBase.cs" />
+    <Compile Include="GH\LSystems\Component_LSystem.cs" />
+    <Compile Include="GH\LSystems\Component_Turtle.cs" />
+    <Compile Include="GH\LSystems\Component_TubeSettings.cs" />
+    <Compile Include="GH\LSystems\GH_TubeSettings.cs" />
+    <Compile Include="GH\CellularAutomata\GH_TypeUtils.cs" />
+    <Compile Include="GH\CellularAutomata\GH_PointUtils.cs" />
+    <Compile Include="Kernel\ABMS\Space\Grid\Grid1d.cs" />
+    <Compile Include="Kernel\Automata\FSM\State.cs" />
+    <Compile Include="Kernel\Automata\FSM\TransitionRule.cs" />
+    <Compile Include="Kernel\CellularAutomata\Cells\CellularRule.cs" />
+    <Compile Include="Kernel\CellularAutomata\Cells\CellWrapper.cs" />
+    <Compile Include="GH\CellularAutomata\GH_CellState.cs" />
+    <Compile Include="Kernel\CellularAutomata\Cells\ICellState.cs" />
+    <Compile Include="GH\CellularAutomata\OnStateConfig.cs" />
+    <Compile Include="Kernel\CellularAutomata\Configuration\ICAConfig.cs" />
+    <Compile Include="Kernel\CellularAutomata\Impl\Elementary\ElementaryCell.cs" />
+    <Compile Include="Kernel\CellularAutomata\Impl\Elementary\ElementaryRule.cs" />
+    <Compile Include="Kernel\CellularAutomata\Impl\Greenberg_Hastings\ExcitableCell.cs" />
+    <Compile Include="Kernel\CellularAutomata\Impl\Greenberg_Hastings\ExcitedTransition.cs" />
+    <Compile Include="Kernel\CellularAutomata\Impl\Greenberg_Hastings\GreenberHastinsStates.cs" />
+    <Compile Include="Kernel\CellularAutomata\Impl\Life\LifeLikeCell.cs" />
+    <Compile Include="Kernel\RLogo\TurtleGraphics\Commands\ScaleThicknessTurtleCommand.cs" />
+    <Compile Include="Kernel\RLogo\TurtleGraphics\Commands\CopyGeometryTurtleCommand.cs" />
+    <Compile Include="Kernel\RLogo\TurtleGraphics\Commands\ScaleStepLengthTurtleCommand.cs" />
+    <Compile Include="Kernel\Systems\DynamicalSystems\DynamicalSystem.cs" />
+    <Compile Include="Kernel\CellularAutomata\CellularSpace\CellularGridBuilder.cs" />
+    <Compile Include="Kernel\CellularAutomata\CellularSpace\SimpleCellularGridBuilder.cs" />
+    <Compile Include="Kernel\Language\ILexer.cs" />
+    <Compile Include="Kernel\Language\IParser.cs" />
+    <Compile Include="Kernel\Language\ITokenStream.cs" />
+    <Compile Include="Kernel\Language\ListTokenStream.cs" />
+    <Compile Include="Kernel\Language\SimpleLexer.cs" />
+    <Compile Include="Kernel\Language\Token.cs" />
+    <Compile Include="Kernel\ABMS\Space\Grid\GridAdder.cs" />
+    <Compile Include="Kernel\ABMS\Context\Identifiable.cs" />
+    <Compile Include="Kernel\Systems\DynamicalSystems\DiscreteTimer.cs" />
+    <Compile Include="Kernel\CellularAutomata\Cells\ICell.cs" />
+    <Compile Include="Kernel\ABMS\Space\Projection\IAdder.cs" />
+    <Compile Include="Kernel\ABMS\Space\Projection\IProjection.cs" />
+    <Compile Include="Kernel\CellularAutomata\Neighborhood\INeighborhoodStrategy.cs" />
+    <Compile Include="Kernel\CellularAutomata\Neighborhood\MooreNeighborhood.cs" />
+    <Compile Include="GH\CellularAutomata\OnCellularGridBuilder.cs" />
+    <Compile Include="Kernel\ABMS\Space\Grid\Grid2d.cs" />
+    <Compile Include="Kernel\Automata\FSM\FiniteStateMachine.cs" />
+    <Compile Include="Kernel\Automata\FSM\InternalMemory.cs" />
+    <Compile Include="Kernel\Systems\DynamicalSystems\TimedMemory.cs" />
+    <Compile Include="Kernel\Systems\DynamicalSystems\TimedState.cs" />
+    <Compile Include="Kernel\Geometry\Util\PointUtils.cs" />
+    <Compile Include="Kernel\CellularAutomata\Configuration\CAConfig.cs" />
+    <Compile Include="Kernel\CellularAutomata\Cells\Cell.cs" />
+    <Compile Include="Kernel\CellularAutomata\Cells\CellState.cs" />
+    <Compile Include="Kernel\CellularAutomata\CA.cs" />
+    <Compile Include="Kernel\Automata\FSM\IStateConfig.cs" />
+    <Compile Include="Kernel\CellularAutomata\Impl\Life\BornRule.cs" />
+    <Compile Include="Kernel\CellularAutomata\Impl\Life\NeighborhoodEvolutionRule.cs" />
+    <Compile Include="Kernel\CellularAutomata\Impl\Life\SurviveRule.cs" />
+    <Compile Include="Kernel\CellularAutomata\Impl\Life\LifeLikeRule.cs" />
+    <Compile Include="Kernel\CellularAutomata\Configuration\CAConfigParser.cs" />
+    <Compile Include="Kernel\CellularAutomata\Configuration\RandomCAConfig.cs" />
+    <Compile Include="Kernel\Geometry\Util\SurfaceUtils.cs" />
+    <Compile Include="Kernel\LSystems\AbstractLSystem.cs" />
+    <Compile Include="Kernel\LSystems\AbstractStringRewritingSystem.cs" />
+    <Compile Include="Kernel\LSystems\LParameter.cs" />
+    <Compile Include="Kernel\LSystems\ParametricModule.cs" />
+    <Compile Include="Kernel\LSystems\Symbol.cs" />
+    <Compile Include="Kernel\LSystems\SymbolMap.cs" />
+    <Compile Include="Kernel\LSystems\SymbolMapping.cs" />
+    <Compile Include="Kernel\LSystems\Word.cs" />
+    <Compile Include="Kernel\LSystems\OLProductionRule.cs" />
+    <Compile Include="Kernel\LSystems\DeterministicLSystem.cs" />
+    <Compile Include="Kernel\LSystems\ILProductionRule.cs" />
+    <Compile Include="Kernel\LSystems\LSystemParser.cs" />
+    <Compile Include="Kernel\LSystems\RewriteRule.cs" />
+    <Compile Include="Kernel\RLogo\Context.cs" />
+    <Compile Include="Kernel\RLogo\GrammarElement.cs" />
+    <Compile Include="Kernel\RLogo\Instructions\Expressions\Expression.cs" />
+    <Compile Include="Kernel\RLogo\Instructions\Instruction.cs" />
+    <Compile Include="Kernel\RLogo\Parser\StandardRLogoParser.cs" />
+    <Compile Include="Kernel\RLogo\TurtleGraphics\Commands\PopStateTurtleCommand.cs" />
+    <Compile Include="Kernel\RLogo\TurtleGraphics\Commands\PushStateTurtleCommand.cs" />
+    <Compile Include="Kernel\RLogo\TurtleGraphics\Commands\TurnAroundTurtleCommand.cs" />
+    <Compile Include="Kernel\RLogo\TurtleGraphics\Commands\EmptyTurtleCommand.cs" />
+    <Compile Include="Kernel\RLogo\TurtleGraphics\Commands\RollRightTurtleCommand.cs" />
+    <Compile Include="Kernel\RLogo\TurtleGraphics\Commands\RollLeftTurtleCommand.cs" />
+    <Compile Include="Kernel\RLogo\TurtleGraphics\Commands\PitchDownTurtleCommand.cs" />
+    <Compile Include="Kernel\RLogo\TurtleGraphics\Commands\PitchUpTurtleCommand.cs" />
+    <Compile Include="Kernel\RLogo\TurtleGraphics\Commands\ReverseHeadingTurtleCommand.cs" />
+    <Compile Include="Kernel\RLogo\TurtleGraphics\Commands\MoveForwardTurtleCommand.cs" />
+    <Compile Include="Kernel\RLogo\TurtleGraphics\Commands\TurnRightTurtleCommand.cs" />
+    <Compile Include="Kernel\RLogo\TurtleGraphics\Commands\TurnLeftTurtleCommand.cs" />
+    <Compile Include="Kernel\RLogo\RLogoInterpreter.cs" />
+    <Compile Include="Kernel\LSystems\ProductionRule.cs" />
+    <Compile Include="Kernel\LSystems\StochasticLSystem.cs" />
+    <Compile Include="Kernel\RLogo\TurtleGraphics\Canvas.cs" />
+    <Compile Include="Kernel\RLogo\TurtleGraphics\Commands\MoveForwardAndDrawTurtleCommand.cs" />
+    <Compile Include="Kernel\RLogo\TurtleGraphics\Commands\TurtleCommand.cs" />
+    <Compile Include="Kernel\RLogo\TurtleGraphics\Commands\TurtleCommandFactory.cs" />
+    <Compile Include="Kernel\RLogo\TurtleGraphics\Pen.cs" />
+    <Compile Include="Kernel\RLogo\TurtleGraphics\Turtle3d.cs" />
+    <Compile Include="Kernel\RLogo\Parser\RLogoParser.cs" />
+    <Compile Include="Kernel\RLogo\TurtleGraphics\TurtleState.cs" />
+    <Compile Include="Kernel\Utils\PresentationUtils.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="GH\Component_RabbitBase.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Kernel\ABMS\Query\" />
+    <Folder Include="Kernel\ABMS\Space\Graph\" />
+    <Folder Include="Kernel\Geometry\CirclePacking\" />
+    <Folder Include="Kernel\RLogo\Parser\Token\" />
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>copy /Y "$(TargetPath)" "C:\Users\Kiril\AppData\Roaming\Grasshopper\Libraries\$(ProjectName).gha"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

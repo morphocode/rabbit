@@ -1,0 +1,12 @@
+Rabbit.csproj.user
+Rabbit.suo
+/bin
+/obj
+/references/GH_IO.dll
+/references/GH_IO.xml
+/references/Grasshopper.dll
+/references/Grasshopper.xml
+/references/RhinoCommon.xml
+/references/RhinoCommon.dll
+/references/Rhino_DotNET.dll
+/*.suo
