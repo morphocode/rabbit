@@ -7,3 +7,4 @@ Rabbit is currently compiled against Rhinoceros 4.
 - Grasshopper.xml
 - RhinoCommon.dll
 - RhinoCommon.xml
+- Rhino_DotNET.dll
